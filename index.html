@@ -4,62 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 첫 웹사이트</title>
+    <title>K-Eungyeong | Portfolio</title>
     <style>
-        /* 간단한 스타일링 */
+        :root {
+            --primary-color: #6366f1;
+            --bg-dark: #0f172a;
+            --text-light: #f8fafc;
+            --card-bg: #1e293b;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
+
+        /* 배경 애니메이션 효과 */
+        .background-blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: move 10s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(10%, 10%); }
+        }
+
+        /* 카드 레이아웃 */
+        .container {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
         }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        p {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+            background-color: #4f46e5;
+        }
+
         footer {
-            text-align: center;
-            padding: 1rem;
+            margin-top: 2rem;
             font-size: 0.8rem;
-            color: #777;
+            color: #475569;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
+    <div class="background-blob"></div>
 
-    <main>
-        <h2>안녕하세요!</h2>
-        <p>이것은 HTML5 표준을 사용하여 만든 <strong>index.html</strong> 샘플 파일입니다.</p>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p>GitHub Pages에 성공적으로 연결되었습니다.<br>나만의 멋진 웹사이트를 시작해보세요.</p>
         
-        <ul>
-            <li>구조는 HTML로 잡고</li>
-            <li>디자인은 CSS로 꾸미며</li>
-            <li>기능은 JavaScript로 더합니다.</li>
-        </ul>
+        <button class="btn" onclick="celebrate()">축하하기 🎉</button>
 
-        <button onclick="greet()">클릭해보세요</button>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 My Web Page. All rights reserved.</p>
-    </footer>
+        <footer>
+            &copy; 2026 k-eungyeong. All rights reserved.
+        </footer>
+    </div>
 
     <script>
-        function greet() {
-            alert('반갑습니다! 웹 개발의 세계에 오신 것을 환영합니다.');
+        function celebrate() {
+            alert('🎉 축하합니다! 페이지 배포에 성공하셨군요!');
         }
     </script>
 
