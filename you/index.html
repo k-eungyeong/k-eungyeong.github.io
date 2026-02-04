@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Workout Routine</title>
+    <style>
+        :root {
+            --bg-black: #121212;
+            --card-gray: #1e1e1e;
+            --point-green: #00ff88;
+            --text-white: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            font-family: 'Pretendard', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 { color: var(--point-green); margin-bottom: 5px; }
+        .header p { color: #888; font-size: 0.9rem; }
+
+        .routine-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .workout-card {
+            background: var(--card-gray);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--point-green);
+        }
+
+        .category {
+            font-size: 0.8rem;
+            color: var(--point-green);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .exercise-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .exercise-item:last-child { border-bottom: none; }
+
+        .info { display: flex; align-items: center; gap: 12px; }
+
+        .checkbox-custom {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--point-green);
+        }
+
+        .details { font-size: 0.85rem; color: #aaa; }
+
+        .progress-container {
+            width: 100%;
+            background: #333;
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 45%; /* 현재 진행률 예시 */
+            height: 100%;
+            background: var(--point-green);
+            box-shadow: 0 0 10px var(--point-green);
+        }
+
+        .status-text {
+            text-align: right;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            color: var(--point-green);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>WORKOUT ROUTINE</h1>
+        <p>오늘의 땀은 배신하지 않는다 💦</p>
+    </div>
+
+    <div class="routine-container">
+        <div class="workout-card">
+            <span class="category">Upper Body</span>
+            <div class="exercise-item">
+                <div class="info">
+                    <input type="checkbox" class="checkbox-custom" checked>
+                    <span>벤치 프레스</span>
+                </div>
+                <span class="details">12회 / 5세트</span>
+            </div>
+            <div class="exercise-item">
+                <div class="info">
+                    <input type="checkbox" class="checkbox-custom">
+                    <span>덤벨 플라이</span>
+                </div>
+                <span class="details">15회 / 3세트</span>
+            </div>
+        </div>
+
+        <div class="workout-card" style="border-left-color: #ff3e3e;">
+            <span class="category" style="color: #ff3e3e;">Lower Body</span>
+            <div class="exercise-item">
+                <div class="info">
+                    <input type="checkbox" class="checkbox-custom">
+                    <span>백 스쿼트</span>
+                </div>
+                <span class="details">10회 / 5세트</span>
+            </div>
+            <div class="exercise-item">
+                <div class="info">
+                    <input type="checkbox" class="checkbox-custom">
+                    <span>레그 익스텐션</span>
+                </div>
+                <span class="details">20회 / 3세트</span>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="status-text">Today's Progress: 45% Done</div>
+    </div>
+
+</body>
+</html>
