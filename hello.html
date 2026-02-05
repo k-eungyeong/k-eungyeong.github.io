@@ -5,9 +5,12 @@
       function calculate()
       {
         //console.log('계산을 시작합니다');
-        console.log(document.getElementById("n1").value);
-        console.log(document.getElementById("n2").value);
-        
+       a=document.getElementById("n1").value;
+       b=document.getElementById("n2").value;
+        a=parselnt(a)
+        b=parselnt(b)
+         exp=`${a}+${b}=${a+b}`
+         console.log(exp)
       }
       function add(n1, n2)
       { a=parseInt(n1);
@@ -36,7 +39,7 @@
   <body>
     숫자1<input type="text" id="n1" name="n1"><br>
     숫자2<input type="text" id="n2" name="n2"><br>
-    <button type="button" onclick="caculate();">계산</button>
+    <button type="button" onclick="calculate();">계산</button>
     <img src="images/noo.jpg" alt="쌀국수" class="copy">
     <img src="images/noo.jpg" alt="쌀국수" style="width: 25%;">
 <br><div class="box">레이아웃 박스</div>
