@@ -2,6 +2,10 @@
 <html lang="ko">
   <head>
     <script>
+      function caculate()
+      {
+        console.log('계산을 시작합니다');
+      }
       function add(n1, n2)
       { a=parseInt(n1);
         b=parseInt(n2);
@@ -27,6 +31,9 @@
     <title>테스트베이비</title>
   </head>
   <body>
+    숫자1<input type="text" name="n1"><br>
+    숫자2<input type="text" name="n2"><br>
+    <button type="button" onclick="caculate();">계산</button>
     <img src="images/noo.jpg" alt="쌀국수" class="copy">
     <img src="images/noo.jpg" alt="쌀국수" style="width: 25%;">
 <br><div class="box">레이아웃 박스</div>
