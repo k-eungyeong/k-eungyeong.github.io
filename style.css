@@ -1,0 +1,14 @@
+ <style>
+    table{border-collapse: collapse; width: 600px; table-layout:fixed; max-width:600px; text-align: left;}
+    th{padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4; text-align: center; overflow:hidden;}
+    td{padding: 10px; border: 1px solid #ddd; height: 100px; vertical-align: top; overflow:hidden;}
+    .holiday{color: red; font-weight: bold;}
+    .today{background-color: #e3f2fd; font-weight: bold; border: 2px solid #2196f3;}
+    .this{background-color: #f4f4f4;}
+    .sun{color:#FF69B4; background-color: #fff0f5;}
+    .sat{color:#000080;}
+    .cal-title{color:#333; line-height: 1.2; margin-bottom: 20px;}
+    .cal-title span{display: block; font-size: 0.5em; color: #999; font-weight: normal; letter-spacing: 2px;}
+    td:hover{background-color:#fff9c4; cursor: pointer; transition:0.3s}
+    td:active{background-color:#ffe082; transform: scale(0.98);}
+    </style>
