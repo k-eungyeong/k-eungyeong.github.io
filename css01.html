@@ -2,12 +2,13 @@
  <html lang="ko">
   <head>
     <style>
-     a::before{content:"👉";} 
-     a::after{content:"👈';}
      a[href^="http:"]{background-color: yellow;}
      a[href*="github"]{background-color: #87CEEB;}
      a[href$="abc.com"]{background-color: pink;}
-
+     
+   a:hover::before{content:"👉";} 
+   a:hover::after{content:"👈';}
+     
      div div a{color:blue;}
      .home:hover{background-color:red;}
      input:focus{outline:5px solid blue;}
