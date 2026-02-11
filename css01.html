@@ -2,6 +2,9 @@
  <html lang="ko">
   <head>
     <style>
+     a[href^="http:"]{color: yellow;}
+     a[href*"github"]{color: sky blue;}
+     a[href&"abc.com"]{color: pink;}
      div#round{display:inline-block; width:0; border: 100px solid pink; border-radius: 50%; background-color:pink;}
      div#style{display:inline-block; width:0; border: 100px solid blue; border-radius: 50%; background-color:blue;}
      body {text-align:center;}
@@ -14,6 +17,11 @@
     <title>csstest</title>
   </head>
   <body>
+   <ul>
+    <li><a href="http://google.com">Google</a></li>
+    <li><a href="https://github.com">Github</a></li>
+    <li><a href="https://abc.com">ABC News network</a></li>
+   </ul>
    <div id="round"></div>
    <div id="style"></div>
    <div class="container">
