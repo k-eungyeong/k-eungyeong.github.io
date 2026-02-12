@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>배고파</title>
- <style>
-     
+  <meta charset="UTF-8">
+  <title> 배고파</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box; } 
+    .container{display:flex; flex-direction: column; height: 100vh; gap: 10px; padding: 10px; background-color: #f0f0f0;}
+    header, footer{ height: 100px;  background-color: #aaa; border: 2px solid #777; }
+    .main-content{  display: flex;  flex-grow:1; gap: 10px; }
+    nav, aside{ flex-basis:200px;background-color: #ddd;border: 2px dashed #aaa; padding:15px}
+    section{ flex-grow: 1; background-color: #fff;border: 2px solid #333; padding: 20px }
  </style>
 </head>
- <body>
-    
- </body>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/noo.jpg" alt="사진" <span>상단</span></header>
+  <div class="main-content">
+    <nav>왼쪽 메뉴</nav>
+    <section>가운데 본문</section>
+    <aside>오른쪽 메뉴</aside>
+  </div>
+  <footer>하단</footer>
+  </div>
+</body>
 </html>
